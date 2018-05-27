@@ -8,7 +8,11 @@ users:
       - users
       - root
     sudouser: Ture
-    ssh_auth: salt://tests/centos.pub
+    keys_dir: salt://tests
+    ssh_auth: centos.pub
+    ssh_keys:
+      - centos.pem
+      - ubuntu.pem
 
 absent_users:
   - canonical

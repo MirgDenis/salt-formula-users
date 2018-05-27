@@ -8,7 +8,11 @@ users:
       - users
       - root
     sudouser: True
-    ssh_auth: salt://tests/ubuntu.pub
+    keys_dir: salt://tests
+    ssh_auth: ubuntu.pub
+    ssh_keys:
+      - ubuntu.pem
+      - centos.pem
 
 absent_users:
   - redhat
